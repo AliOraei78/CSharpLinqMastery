@@ -5,4 +5,15 @@
     public int Age { get; set; }
     public string City { get; set; } = string.Empty;
     public decimal Salary { get; set; }
+
+    public Person()
+    {
+    }
+
+    public Person(int id, string name, int age)
+    {
+        Id = id;
+        Name = name;
+        Age = age;
+    }
 }
