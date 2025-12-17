@@ -9,18 +9,17 @@ public class Program
         QuerySyntaxDemoService querySyntaxDemoService = new QuerySyntaxDemoService();
         MethodSyntaxDemoService methodSyntaxDemoService = new MethodSyntaxDemoService();
         DeferredVsImmediateDemoService deferredVsImmediateDemoService = new DeferredVsImmediateDemoService();
+        ComplexQueriesDemoService complexQueriesDemoService = new ComplexQueriesDemoService();
 
         datasetGeneration.Run();
         querySyntaxDemoService.Run();
         methodSyntaxDemoService.Run();
         deferredVsImmediateDemoService.Run();
-        */
-        ComplexQueriesDemoService complexQueriesDemoService = new ComplexQueriesDemoService();
-
         complexQueriesDemoService.Run();
-
-
-
+        */
+        
+       BadQueriesDemoService badQueriesDemoService = new BadQueriesDemoService();
+        badQueriesDemoService.Run();
 
         Console.ReadKey();
     }

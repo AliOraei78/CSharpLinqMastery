@@ -31,4 +31,12 @@ A console application demonstrating comprehensive LINQ skills on a 100,000-recor
   - SelectMany, Any, All, Aggregate, Distinct, SkipWhile/TakeWhile, Zip
 - Real-world scenarios demonstrated.
 
+## Bad LINQ Queries & Anti-Patterns
+
+- **N+1 Problem** – Separate query per item (slow database calls in real apps).
+- **Cartesian Product** – Join without proper condition (explosive result set).
+- **Premature ToList()** – Forces immediate execution, high memory usage.
+
+Common pitfalls in large datasets – demonstrated with timing and memory measurements.
+
 ## Project Structure
