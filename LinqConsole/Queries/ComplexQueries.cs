@@ -2,7 +2,7 @@
 public static class ComplexQueries
 {
     private static List<Person> _persons = DataGenerator.GeneratePersons();
-    private static List<Department> _departments = DataGenerator.GenerateDepartment();
+    private static List<Department> _departments = DataGenerator.GenerateDepartments();
 
     public static IEnumerable<dynamic> GroupByCityWithCountAndAverageSalary() => 
             _persons.GroupBy(p => p.City)
@@ -49,4 +49,8 @@ public static class ComplexQueries
         var bonuses = new decimal[] { 5000, 10000, 15000, 20000, 25000 };
         return _persons.Take(5).Select(p => p.Salary).Zip(bonuses, (salary, bonus) => salary + bonus);
     }
+
+    public static IEnumerable<dynamic> GetByAge() =>
+    _persons.Where(p => p.Age > 30)
+    .OrderByDescending(p => p.Age).ToList();
 }

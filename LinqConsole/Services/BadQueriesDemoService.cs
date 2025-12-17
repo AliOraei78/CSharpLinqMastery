@@ -27,7 +27,7 @@ public class BadQueriesDemoService
         Console.WriteLine("Get by age bad query: ");
         stopwatch = Stopwatch.StartNew();
         beforeMemory = GC.GetTotalMemory(true);
-        var getAge = BadQueries.GetByAgeDeffered();
+        var getAge = BadQueries.GetByAgeToList();
         stopwatch.Stop();
         memoryAfter = GC.GetTotalMemory(true);
         Console.WriteLine($"Time: {stopwatch.ElapsedMilliseconds}, Memory: {memoryAfter - beforeMemory}");

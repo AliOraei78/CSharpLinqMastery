@@ -1,4 +1,5 @@
-﻿using Bogus;
+﻿using BenchmarkDotNet.Running;
+using Bogus;
 
 public class Program
 {
@@ -10,16 +11,17 @@ public class Program
         MethodSyntaxDemoService methodSyntaxDemoService = new MethodSyntaxDemoService();
         DeferredVsImmediateDemoService deferredVsImmediateDemoService = new DeferredVsImmediateDemoService();
         ComplexQueriesDemoService complexQueriesDemoService = new ComplexQueriesDemoService();
+        BadQueriesDemoService badQueriesDemoService = new BadQueriesDemoService();
 
         datasetGeneration.Run();
         querySyntaxDemoService.Run();
         methodSyntaxDemoService.Run();
         deferredVsImmediateDemoService.Run();
         complexQueriesDemoService.Run();
-        */
-        
-       BadQueriesDemoService badQueriesDemoService = new BadQueriesDemoService();
         badQueriesDemoService.Run();
+        */
+
+        var summary = BenchmarkRunner.Run<LinqOptimizationBenchmark>();
 
         Console.ReadKey();
     }

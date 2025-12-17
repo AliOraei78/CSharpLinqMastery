@@ -15,7 +15,7 @@ public static class DataGenerator
             
     }
 
-    public static List<Department> GenerateDepartment()
+    public static List<Department> GenerateDepartments()
     {
         return new List<Department>
     {

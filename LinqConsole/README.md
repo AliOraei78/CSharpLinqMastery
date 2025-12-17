@@ -39,4 +39,17 @@ A console application demonstrating comprehensive LINQ skills on a 100,000-recor
 
 Common pitfalls in large datasets – demonstrated with timing and memory measurements.
 
+## LINQ Optimization & Benchmark
+
+- BenchmarkDotNet results: significant improvements in time and memory.
+
+| Method                | Mean          | Error         | StdDev        | Gen0      | Gen1      | Gen2     | Allocated   |
+|---------------------- |--------------:|--------------:|--------------:|----------:|----------:|---------:|------------:|
+| Bad_NPlus1            | 23,462.136 us | 1,069.2095 us | 3,135.8066 us | 1062.5000 | 1031.2500 | 250.0000 | 17091.48 KB |
+| Fixed_NPlus1          |     39.657 us |     0.7977 us |     0.9186 us |    5.7983 |    0.6104 |        - |   107.17 KB |
+| Bad_Cartesian         |      8.729 us |     0.1707 us |     0.2392 us |    0.4272 |         - |        - |     8.06 KB |
+| Fixed_Cartesian       |    917.994 us |     6.8935 us |     5.7564 us |         - |         - |        - |     1.83 KB |
+| Bad_PrematureToList   |  2,126.798 us |    28.9512 us |    27.0809 us |   89.8438 |   89.8438 |  89.8438 |  1859.62 KB |
+| Fixed_PrematureToList |  1,659.137 us |    26.3353 us |    23.3456 us |   64.4531 |   64.4531 |  64.4531 |  1243.88 KB |
+
 ## Project Structure

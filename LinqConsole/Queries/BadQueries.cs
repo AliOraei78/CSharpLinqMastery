@@ -1,7 +1,7 @@
 ﻿public static class BadQueries
 {
     private static List<Person> _persons = DataGenerator.GeneratePersons();
-    private static List<Department> _departments = DataGenerator.GenerateDepartment();
+    private static List<Department> _departments = DataGenerator.GenerateDepartments();
 
     public static List<string> GetDepartments()
     {
@@ -26,7 +26,7 @@
                                                                 Department = d.Name
                                                              };
 
-    public static IEnumerable<dynamic> GetByAgeDeffered() => 
+    public static IEnumerable<dynamic> GetByAgeToList() => 
         _persons.Where(p => p.Age > 30)
         .ToList()
         .OrderByDescending(p => p.Age);
