@@ -12,5 +12,5 @@ public static class MethodSyntaxQueries
 
     public static IEnumerable<Person> GetTop10Youngest() => _persons.OrderBy(p => p.Age).Take(10);
 
-    public static IEnumerable<Person> GetHighSalaryInNY() => _persons.Where(p => p.City == "New York" && p.Salary > 100000).OrderBy(p => p.Name);
+    public static IEnumerable<Person> GetHighSalaryInAylaton() => _persons.Where(p => p.City == "Aylaton" && p.Salary > 100000).OrderBy(p => p.Name);
 }

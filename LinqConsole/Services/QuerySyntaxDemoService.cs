@@ -28,9 +28,9 @@
             Console.WriteLine($"{y.Name}, {y.Age}");
         Console.WriteLine("-------------\n");
 
-        var highSalaryNYQuery = QuerySyntaxQueries.GetHighSalaryInNY().Take(5).ToList();
-        Console.WriteLine("Top 10 by salary in nyc:");
-        foreach (var hs in highSalaryNYQuery)
+        var highSalaryAylatonQuery = QuerySyntaxQueries.GetHighSalaryInAylaton().Take(5).ToList();
+        Console.WriteLine("Top 10 by salary in Aylaton:");
+        foreach (var hs in highSalaryAylatonQuery)
             Console.WriteLine($"{hs.Name}, {hs.Salary:C}");
         Console.WriteLine("-------------\n");
     }

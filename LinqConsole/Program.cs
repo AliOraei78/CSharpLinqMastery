@@ -4,6 +4,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        /*
         DatasetGeneration datasetGeneration = new DatasetGeneration();
         QuerySyntaxDemoService querySyntaxDemoService = new QuerySyntaxDemoService();
         MethodSyntaxDemoService methodSyntaxDemoService = new MethodSyntaxDemoService();
@@ -13,6 +14,13 @@ public class Program
         querySyntaxDemoService.Run();
         methodSyntaxDemoService.Run();
         deferredVsImmediateDemoService.Run();
+        */
+        ComplexQueriesDemoService complexQueriesDemoService = new ComplexQueriesDemoService();
+
+        complexQueriesDemoService.Run();
+
+
+
 
         Console.ReadKey();
     }

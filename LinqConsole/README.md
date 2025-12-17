@@ -23,4 +23,12 @@ A console application demonstrating comprehensive LINQ skills on a 100,000-recor
 - Deferred: useful for live data, but multiple enumerations can be expensive.
 - Immediate: better for caching results or when data shouldn't change.
 
+## Complex LINQ Queries
+
+- 10 advanced queries on 100k dataset:
+  - GroupBy with aggregation (average salary per city)
+  - Inner Join with Department data
+  - SelectMany, Any, All, Aggregate, Distinct, SkipWhile/TakeWhile, Zip
+- Real-world scenarios demonstrated.
+
 ## Project Structure

@@ -20,8 +20,8 @@ public static class QuerySyntaxQueries
                                                             orderby p.Age
                                                             select p).Take(10);
 
-    public static IEnumerable<Person> GetHighSalaryInNY() => from p in _persons
-                                                             where p.Salary > 100000 && p.City == "New York"
+    public static IEnumerable<Person> GetHighSalaryInAylaton() => from p in _persons
+                                                             where p.Salary > 100000 && p.City == "Aylaton"
                                                              orderby p.Name
                                                              select p;
 }
