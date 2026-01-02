@@ -51,5 +51,3 @@ Common pitfalls in large datasets – demonstrated with timing and memory measur
 | Fixed_Cartesian       |    917.994 us |     6.8935 us |     5.7564 us |         - |         - |        - |     1.83 KB |
 | Bad_PrematureToList   |  2,126.798 us |    28.9512 us |    27.0809 us |   89.8438 |   89.8438 |  89.8438 |  1859.62 KB |
 | Fixed_PrematureToList |  1,659.137 us |    26.3353 us |    23.3456 us |   64.4531 |   64.4531 |  64.4531 |  1243.88 KB |
-
-## Project Structure
